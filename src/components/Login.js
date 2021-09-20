@@ -23,12 +23,21 @@ const Login = (props) => {
   };
 
   return (
-    <div>
+    <div className="login-main">
       {
-        <form onSubmit={formHandler}>
-          <input type="text" placeholder="name" ref={nameRef} />
-          <input type="submit" value="Submit" />
-        </form>
+        <>
+          {/* <img className = "backdrop" src="../images/backdrop.jpg" alt="image" /> */}
+          <form className="login-form" onSubmit={formHandler}>
+            <input
+              className="login-name"
+              type="text"
+              placeholder="Please enter your name"
+              ref={nameRef}
+            />
+            <br />
+            <input className="submit-btn" type="submit" value="SUBMIT" />
+          </form>
+        </>
       }
     </div>
   );

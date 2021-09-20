@@ -1,0 +1,48 @@
+.main-div {
+  align-content: center;
+  background-color: aqua;
+  height: 100%;
+  width: 99.2%;
+  border: 3px solid cadetblue;
+  padding-bottom: 310px;
+}
+
+.login-main {
+  background-color: rgb(4, 41, 58);
+  height: 250px;
+  width: 200px;
+  border: 3px solid rgb(161, 160, 161);
+  border-radius: 10px;
+  padding: 20px 100px 70px 10px;
+  margin-top: 50px;
+  margin-left: 490px;
+  text-decoration-color: rebeccapurple;
+}
+.backdrop {
+  height: 100%;
+  width: 100%;
+}
+
+.login-form {
+  margin: 20px;
+  align-content: center;
+}
+
+.login-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0px;
+  height: 50px;
+  width: 250px;
+  border: 3px solid rgb(8, 247, 247);
+}
+
+.submit-btn {
+  margin: 25px 10px 100px 70px;
+  align-items: center;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  font-weight: bold;
+  border: 3px solid rgb(8, 247, 247);
+}

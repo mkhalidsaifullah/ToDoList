@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Login from "./components/Login";
 import TodoList from "./components/TodoList";
+import "./components/Login.css";
 
 function App() {
   const [user, setUser] = useState("");
@@ -12,8 +13,10 @@ function App() {
 
   return (
     <>
-      {!user && <Login userName={userHandler} />}
-      {user && <TodoList userName={user} />}
+      <div className="main-div">
+        {!user && <Login userName={userHandler} />}
+        {user && <TodoList userName={user} />}
+      </div>
     </>
   );
 }
