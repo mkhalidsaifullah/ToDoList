@@ -14,14 +14,12 @@ const Login = (props) => {
     }
 
     if (name.match(letters)) {
-      return true;
+      props.userName(name);
+      nameRef.current.value = "";
     } else {
       alert("invalid name");
-      return false;
+      return;
     }
-
-    props.userName(name);
-    nameRef.current.value = "";
   };
 
   return (
