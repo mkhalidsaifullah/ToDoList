@@ -1,6 +1,6 @@
 .main-div {
   align-content: center;
-  background-color: aqua;
+  background-color: rgb(14, 35, 42);
   height: 100%;
   width: 99.2%;
   border: 3px solid cadetblue;
@@ -8,7 +8,7 @@
 }
 
 .login-main {
-  background-color: rgb(4, 41, 58);
+  background-color: rgb(42, 21, 14);
   height: 250px;
   width: 200px;
   border: 3px solid rgb(161, 160, 161);
@@ -16,7 +16,7 @@
   padding: 20px 100px 70px 10px;
   margin-top: 50px;
   margin-left: 490px;
-  text-decoration-color: rebeccapurple;
+  box-shadow: white 50px;
 }
 .backdrop {
   height: 100%;
@@ -34,7 +34,7 @@
   margin-top: 0px;
   height: 50px;
   width: 250px;
-  border: 3px solid rgb(8, 247, 247);
+  border: 3px solid rgb(161, 160, 161);
 }
 
 .submit-btn {
@@ -44,5 +44,5 @@
   height: 50px;
   width: 100px;
   font-weight: bold;
-  border: 3px solid rgb(8, 247, 247);
+  border: 3px solid rgb(161, 160, 161);
 }
