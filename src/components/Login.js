@@ -6,20 +6,12 @@ const Login = (props) => {
     e.preventDefault();
     const name = nameRef.current.value;
 
-    const letters = /^[A-Za-z]+$/;
-
     if (name.trim().length === 0) {
       alert("name field can not be empty");
       return;
     }
-
-    if (name.match(letters)) {
-      props.userName(name);
-      nameRef.current.value = "";
-    } else {
-      alert("invalid name");
-      return;
-    }
+    props.userName(name);
+    nameRef.current.value = "";
   };
 
   return (

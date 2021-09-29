@@ -1,11 +1,11 @@
-.main-div {
+/* .main-div {
   align-content: center;
   background-color: rgb(14, 35, 42);
   height: 100%;
   width: 99.2%;
   border: 3px solid cadetblue;
   padding-bottom: 310px;
-}
+} */
 
 .login-main {
   background-color: rgb(42, 21, 14);
@@ -17,10 +17,6 @@
   margin-top: 50px;
   margin-left: 490px;
   box-shadow: white 50px;
-}
-.backdrop {
-  height: 100%;
-  width: 100%;
 }
 
 .login-form {

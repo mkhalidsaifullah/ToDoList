@@ -1,8 +1,7 @@
 .h1todo-list {
   align-content: center;
-  background-color: rgb(37, 33, 41);
-  height: 100%;
-  width: 99.2%;
-  border: 3px solid cadetblue;
-  padding-bottom: 310px;
+  color: yellow;
+}
+.toItem-list{
+  color: yellow;
 }
