@@ -10,6 +10,7 @@ const Login = (props) => {
       alert("name field can not be empty");
       return;
     }
+
     props.userName(name);
     nameRef.current.value = "";
   };

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Login from "./components/Login";
 import TodoList from "./components/TodoList";
-import "./components/Login.css";
-import "./components/TodoList";
 function App() {
   const [user, setUser] = useState("");
   const userHandler = (user) => {
