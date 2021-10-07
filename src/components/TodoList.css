@@ -1,7 +1,72 @@
 .h1todo-list {
   align-content: center;
+  text-align: center;
   color: yellow;
+  text-decoration: wavy;
 }
-.toItem-list{
+
+.todo-form {
+  background-color: #063970;
+  width: 300px;
+  border: 3px solid grey;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  box-shadow: grey 50px;
+}
+
+
+.todo-item {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 18px;
+  height: 50px;
+  width: 250px;
+  border: 3px solid grey;
+  border-radius: 3px;
+}
+
+.toItem-list {
   color: yellow;
+  margin-top: -100px;
+  margin-left: -10px;
+  list-style-type: none;
+}
+
+.toItem-list > li {
+  margin-bottom: 5px;
+  border: 1px solid orangered;
+  background-color:turquoise;
+  border-radius: 5px;
+  margin-left: -10px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.checkbox {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+.todo-button {
+  margin: 25px 0px 100px 100px;
+  align-items: center;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  font-weight: bold;
+  border: 3px solid grey;
+}
+
+.delete-todo {
+  margin-right: 70px;
+  float: right;
+  border: 2px solid red;
+  
+}
+.delete-todo:hover{
+  background-color: red;
+  color: white;
 }

@@ -25,28 +25,39 @@ const TodoList = ({ userName }) => {
     todoRef.current.value = "";
   };
 
+  const deleteTodo = (toId) => {
+    setTodos((prvTodos) => {
+      return prvTodos.filter((todo) => toId !== todo.id);
+    });
+  };
+
   return (
     <div>
       <h1 className="h1todo-list">Wellcome {userName}</h1>
+      <div className="todo-form">
+        <form onSubmit={formHandler}>
+          <input
+            className="todo-item"
+            type="text"
+            placeholder="Please add your list item "
+            ref={todoRef}
+          />
 
-      <form onSubmit={formHandler}>
-        <input
-          type="text"
-          placeholder="Please add your list item "
-          ref={todoRef}
-        />
-        <input type="submit" value="ADD" />
-      </form>
-
-      <ul className="toItem-list">
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            <input type="checkbox" className="completed" />
-            {todo.title}
-            <button className="delete-todo"> X </button>
-          </li>
-        ))}
-      </ul>
+          <input className="todo-button" type="submit" value="ADD" />
+        </form>
+        <ul className="toItem-list">
+          {todos && <h1>These are TODOS</h1>}
+          {todos.map((todo) => (
+            <li key={todo.id}>
+              <input type="checkbox" className="checkbox" />
+              {todo.title}
+              <button className="delete-todo" onClick={deleteTodo(todo.id)}>
+                                X
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
