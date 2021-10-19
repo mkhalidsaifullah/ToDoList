@@ -5,10 +5,10 @@ import "./TodoList.css";
 
 const TodoList = ({ userName }) => {
   const [todos, setTodos] = useState([
-    { id: 1, title: "university fee" },
-    { id: 2, title: "office task" },
-    { id: 3, title: "bike tuning" },
-    { id: 4, title: "bill submition" },
+    { id: 1, title: "university fee", completed: false },
+    { id: 2, title: "office task", completed: true },
+    { id: 3, title: "bike tuning", completed: false },
+    { id: 4, title: "bill submition", completed: true },
   ]);
 
   const addTodos = (id, title) => {
@@ -23,6 +23,13 @@ const TodoList = ({ userName }) => {
     });
   };
 
+  const chekTodo = (toId, status) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === toId ? { ...todo, completed: status } : todo
+      )
+    );
+  };
   return (
     <div>
       <h1 className="h1todo-list">Wellcome {userName}</h1>
@@ -38,6 +45,7 @@ const TodoList = ({ userName }) => {
               key={todo.id.toString()}
               todo={todo}
               deleteTodo={deleteTodo}
+              checkTodo={chekTodo}
             />
           ))}
         </ul>
