@@ -60,6 +60,11 @@
   border: 3px solid grey;
 }
 
+:hover.todo-button{
+  background-color: #09d319fd;
+  color: white;
+}
+
 .delete-todo {
   margin-right: 70px;
   float: right;

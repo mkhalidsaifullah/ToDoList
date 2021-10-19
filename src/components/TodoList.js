@@ -1,29 +1,21 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
+import AddTodo from "./AddTodo";
+import Todo from "./Todo";
 import "./TodoList.css";
 
 const TodoList = ({ userName }) => {
   const [todos, setTodos] = useState([
     { id: 1, title: "university fee" },
-    { id: 2, title: "office task1" },
+    { id: 2, title: "office task" },
     { id: 3, title: "bike tuning" },
     { id: 4, title: "bill submition" },
   ]);
 
-  const todoRef = useRef("");
-
-  const formHandler = (e) => {
-    e.preventDefault();
-    const title = todoRef.current.value;
-    const id = Math.random();
-
-    if (title.trim().length === 0) {
-      alert("To do list item field can not be empty");
-      return;
-    }
-
+  const addTodos = (id, title) => {
     setTodos((prvTodos) => [{ id, title }, ...prvTodos]);
-    todoRef.current.value = "";
   };
+
+  // delete todos
 
   const deleteTodo = (toId) => {
     setTodos((prvTodos) => {
@@ -35,26 +27,18 @@ const TodoList = ({ userName }) => {
     <div>
       <h1 className="h1todo-list">Wellcome {userName}</h1>
       <div className="todo-form">
-        <form onSubmit={formHandler}>
-          <input
-            className="todo-item"
-            type="text"
-            placeholder="Please add your list item "
-            ref={todoRef}
-          />
+        <AddTodo addTodos={addTodos} />
 
-          <input className="todo-button" type="submit" value="ADD" />
-        </form>
+        {/* Printing todos */}
+
         <ul className="toItem-list">
           {todos && <h1>These are TODOS</h1>}
           {todos.map((todo) => (
-            <li key={todo.id}>
-              <input type="checkbox" className="checkbox" />
-              {todo.title}
-              <button className="delete-todo" onClick={deleteTodo(todo.id)}>
-                                X
-              </button>
-            </li>
+            <Todo
+              key={todo.id.toString()}
+              todo={todo}
+              deleteTodo={deleteTodo}
+            />
           ))}
         </ul>
       </div>
